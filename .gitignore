@@ -4,3 +4,13 @@
 *.jar
 *.war
 *.ear
+
+# Maven #
+target
+
+# IntelliJ #
+.idea
+*.iml
+
+# Apple #
+.DS_Store
