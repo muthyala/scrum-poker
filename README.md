@@ -1,10 +1,10 @@
-Planning Poker
-==============
+Scrum Poker
+===========
 
 Users
 -----
 
-- Facilitator: person who creates a new planning poker game.
+- Moderator: person who creates a new planning poker game.
 - Player: person who plays the planning game
 
 Stories
