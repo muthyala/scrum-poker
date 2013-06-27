@@ -10,12 +10,12 @@ Users
 Stories
 -------
 
-Marketing
- - As a marketing executive, I want users to be able to share the application on Facebook, to increase traffic
- - As a marketing executive, I want users to be able to share the application on LinkedIn, to increase traffic
- - As a marketing executive, I want users to be able to share the application on Google+, to increase traffic
- - As a marketing executive, I want users to be able to share the application on Twitter, to increase traffic
- - As a marketing executive, I want users to be able to share the application on Pinterest, to increase traffic
+- Marketing
+  - As a marketing executive, I want users to be able to share the application on Facebook, to increase traffic
+  - As a marketing executive, I want users to be able to share the application on LinkedIn, to increase traffic
+  - As a marketing executive, I want users to be able to share the application on Google+, to increase traffic
+  - As a marketing executive, I want users to be able to share the application on Twitter, to increase traffic
+  - As a marketing executive, I want users to be able to share the application on Pinterest, to increase traffic
 
 Constraints
 -----------
