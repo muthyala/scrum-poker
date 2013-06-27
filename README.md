@@ -22,8 +22,8 @@ Stories
 - Facilitator
   - As a facilitator, I want to estimate stories across the whole team, so that our story estimates are given full consideration
   - As a facilitator, I want to choose the card deck, so that players reuse consistent values
-- Player
-  - As a player, I want to personalise my desk
+  - As a facilitator, I want to have multiple rounds, so that players can reach consensus
+  - As a facilitator, I want to group past games by project, so that players can triangulate their estimates
 
 Constraints
 -----------
@@ -32,3 +32,5 @@ Constraints
 - Service should allow an experienced facilitator to create a new game in < 10 seconds
 - Shouldn't require a sign-up to start a game
 - Service must be internationalised
+- URLs must be easy to share
+- Must be usable from a tablet, e.g. an iPad
