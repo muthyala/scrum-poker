@@ -21,6 +21,9 @@ Stories
   - As a marketing executive, I want to see visitor statistics, so that I can market the site more effectively
 - Facilitator
   - As a facilitator, I want to estimate stories across the whole team, so that our story estimates are given full consideration
+  - As a facilitator, I want to choose the card deck, so that players reuse consistent values
+- Player
+  - As a player, I want to personalise my desk
 
 Constraints
 -----------
