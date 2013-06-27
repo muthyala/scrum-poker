@@ -19,11 +19,12 @@ Stories
   - As a marketing executive, I want users to be able to share the application on Twitter, so that traffic increases
   - As a marketing executive, I want users to be able to share the application on Pinterest, so that traffic increases
   - As a marketing executive, I want to see visitor statistics, so that I can market the site more effectively
-- Facilitator
-  - As a facilitator, I want to estimate stories across the whole team, so that our story estimates are given full consideration
-  - As a facilitator, I want to choose the card deck, so that players reuse consistent values
-  - As a facilitator, I want to have multiple rounds, so that players can reach consensus
-  - As a facilitator, I want to group past games by project, so that players can triangulate their estimates
+- Moderator
+  - As a moderator, I want to estimate stories across the whole team, so that our story estimates are given full consideration
+  - As a moderator, I want to choose the card deck, so that players reuse consistent values
+  - As a moderator, I want to have multiple rounds, so that players can reach consensus
+  - As a moderator, I want to group past games by project, so that players can triangulate their estimates
+  - As a moderator, I want to add a list of stories to estimate, so that the session is not interrupted
 
 Constraints
 -----------
