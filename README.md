@@ -10,6 +10,8 @@ Users
 Stories
 -------
 
+- Finance
+  - As a site owner, I want to show ads, to earn revenue from ad networks
 - Marketing
   - As a marketing executive, I want users to be able to share the application on Facebook, to increase traffic
   - As a marketing executive, I want users to be able to share the application on LinkedIn, to increase traffic
