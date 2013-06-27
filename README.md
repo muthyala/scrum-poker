@@ -1,6 +1,8 @@
 Scrum Poker
 ===========
 
+[![Build Status](https://travis-ci.org/adaptive-logic/scrum-poker.png?branch=master)](https://travis-ci.org/adaptive-logic/scrum-poker)
+
 Users
 -----
 
