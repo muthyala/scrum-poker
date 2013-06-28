@@ -14,8 +14,8 @@
 
         <p>Scrum Poker is a quick and easy scrum estimation tool for your distributed team.</p>
 
-        <form action="/session" method="post">
-            <input type="text" placeholder="Your session name"/>
+        <form action="/project" method="post">
+            <input name="name" type="text" placeholder="Your project name"/>
             <button type="submit" class="btn btn-primary">Start</button>
         </form>
     </div>

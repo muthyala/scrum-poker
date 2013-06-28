@@ -1,4 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +12,9 @@
 <body>
 <div class="container">
     <div class="hero-unit">
-        <h1>Created New Session</h1>
+        <h1>Created New Project</h1>
 
-        <p>I <em>could</em> have just created a new session.</p>
+        <p>I have just created a new project called &ldquo;${name}&rdquo;.</p>
     </div>
 </div>
 <script src="http://code.jquery.com/jquery.js"></script>
