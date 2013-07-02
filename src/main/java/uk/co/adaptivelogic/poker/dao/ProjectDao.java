@@ -11,4 +11,5 @@ import uk.co.adaptivelogic.poker.entity.Project;
  */
 public interface ProjectDao {
     public void save(Project project);
+    public Project getProject(Long projectId);
 }

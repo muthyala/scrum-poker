@@ -18,4 +18,8 @@ public class HibernateProjectDao implements ProjectDao {
     public void save(Project project) {
         sessionFactory.getCurrentSession().save(project);
     }
+
+    public Project getProject(Long projectId) {
+        return (Project) sessionFactory.getCurrentSession().get(Project.class, projectId);
+    }
 }

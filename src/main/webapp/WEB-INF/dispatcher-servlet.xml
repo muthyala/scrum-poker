@@ -27,6 +27,9 @@
         <property name="annotatedClasses">
             <list>
                 <value>uk.co.adaptivelogic.poker.entity.Project</value>
+                <value>uk.co.adaptivelogic.poker.entity.Team</value>
+                <value>uk.co.adaptivelogic.poker.entity.User</value>
+                <value>uk.co.adaptivelogic.poker.entity.UserStory</value>
             </list>
         </property>
     </bean>
@@ -41,7 +44,7 @@
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
-            <value>/WEB-INF/pages/</value>
+            <value>/</value>
         </property>
         <property name="suffix">
             <value>.jsp</value>
