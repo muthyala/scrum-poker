@@ -4,7 +4,7 @@
 
     <groupId>uk.co.adaptivelogic</groupId>
     <artifactId>scrum-poker</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>scrum-poker</name>
