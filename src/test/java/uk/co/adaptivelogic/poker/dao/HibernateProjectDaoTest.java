@@ -1,5 +1,6 @@
 package uk.co.adaptivelogic.poker.dao;
 
+import org.hibernate.classic.Session;
 import org.hibernate.SessionFactory;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import uk.co.adaptivelogic.poker.entity.Project;
+import static org.mockito.Mockito.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,14 +17,15 @@ import uk.co.adaptivelogic.poker.entity.Project;
  * Time: 19:31
  * To change this template use File | Settings | File Templates.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
 public class HibernateProjectDaoTest {
     private HibernateProjectDao projectDao;
 
     @Before
     public void setUp() {
         projectDao = new HibernateProjectDao();
-        SessionFactory sessionFactory = Mockito.mock(SessionFactory.class);
+        SessionFactory sessionFactory = mock(SessionFactory.class);
+        Session session = mock(Session.class);
+        when(sessionFactory.getCurrentSession()).thenReturn(session);
         projectDao.setSessionFactory(sessionFactory);
     }
 
@@ -30,6 +33,5 @@ public class HibernateProjectDaoTest {
     public void testSave() throws Exception {
         Project project = new Project();
         projectDao.save(project);
-
     }
 }

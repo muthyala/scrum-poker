@@ -29,7 +29,7 @@ public class InvitationController {
         this.projectDao = projectDao;
     }
 
-    @RequestMapping("/project/{projectId}/invite", method = RequestMethod.GET)
+    @RequestMapping(value = "/project/{projectId}/invite", method = RequestMethod.GET)
     public ModelAndView handleInvitation(@PathVariable("projectId") Long projectId) {
         ModelAndView model = new ModelAndView("invitation");
         model.getModel().put("project", projectDao.getProject(projectId));
@@ -37,11 +37,13 @@ public class InvitationController {
         return model;
     }
 
-    @RequestMapping("/project/{projectId}/invite", method = RequestMethod.POST)
+    @RequestMapping(value = "/project/{projectId}/invite", method = RequestMethod.POST)
     public String handleInvitation(@PathVariable("projectId") Long projectId, @RequestParam("name") String name) {
         Project project = projectDao.getProject(projectId);
         User user = new User();
-        project.getTeam().getMembers().add()
+        user.setName(name);
+        project.getTeam().getMembers().add(user);
+        projectDao.save(project);
 
         return "redirect: /project/" + project.getId();
     }
