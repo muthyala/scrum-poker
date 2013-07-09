@@ -34,7 +34,7 @@ public class HibernateProjectDaoTest {
         Project project = new Project();
         projectDao.save(project);
 
-        verify(session).save(project);
+        verify(session).saveOrUpdate(project);
     }
 
     @Test
