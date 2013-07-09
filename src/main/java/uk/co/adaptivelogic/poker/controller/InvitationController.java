@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 import uk.co.adaptivelogic.poker.dao.ProjectDao;
 import uk.co.adaptivelogic.poker.entity.Project;
 import uk.co.adaptivelogic.poker.entity.User;
@@ -38,13 +39,13 @@ public class InvitationController {
     }
 
     @RequestMapping(value = "/project/{projectId}/invite", method = RequestMethod.POST)
-    public String handleInvitation(@PathVariable("projectId") Long projectId, @RequestParam("name") String name) {
+    public ModelAndView handleInvitation(@PathVariable("projectId") Long projectId, @RequestParam("name") String name) {
         Project project = projectDao.getProject(projectId);
         User user = new User();
         user.setName(name);
-        project.getTeam().getMembers().add(user);
+        project.getTeam().add(user);
         projectDao.save(project);
 
-        return "redirect: /project/" + project.getId();
+        return new ModelAndView(new RedirectView("/project/" + project.getId() + "/estimate"));
     }
 }

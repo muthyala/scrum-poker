@@ -17,6 +17,18 @@
 
                 return false;
             });
+
+            setInterval(function () {
+                $.ajax({
+                    url: "/project/${project.getId()}/story",
+                    dataType: "json",
+                    accepts: {
+                        text: "application/json"
+                    },
+                    success: function (data) {
+
+                    }}).done();
+            }, 5000);
         });
     </script>
 </head>

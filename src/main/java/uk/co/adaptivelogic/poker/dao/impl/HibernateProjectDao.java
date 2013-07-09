@@ -1,9 +1,10 @@
-package uk.co.adaptivelogic.poker.dao;
+package uk.co.adaptivelogic.poker.dao.impl;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import uk.co.adaptivelogic.poker.dao.ProjectDao;
 import uk.co.adaptivelogic.poker.entity.Project;
 
 @Transactional @Repository
@@ -16,7 +17,7 @@ public class HibernateProjectDao implements ProjectDao {
     }
 
     public void save(Project project) {
-        sessionFactory.getCurrentSession().save(project);
+        sessionFactory.getCurrentSession().saveOrUpdate(project);
     }
 
     public Project getProject(Long projectId) {

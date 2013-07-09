@@ -1,6 +1,9 @@
 package uk.co.adaptivelogic.poker.entity;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.NaturalId;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Generated;
 import javax.persistence.*;
@@ -16,9 +19,11 @@ public class Project extends Versionable {
     private String name;
     @OneToOne(cascade = CascadeType.ALL)
     private User moderator;
-    @OneToOne(cascade = CascadeType.ALL)
-    private Team team;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<User> team = new ArrayList<User>();
+    @OneToMany(cascade = CascadeType.ALL)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<UserStory> userStories = new ArrayList<UserStory>();
 
     public Long getId() {
@@ -45,11 +50,11 @@ public class Project extends Versionable {
         this.moderator = moderator;
     }
 
-    public Team getTeam() {
+    public List<User> getTeam() {
         return team;
     }
 
-    public void setTeam(Team team) {
+    public void setTeam(List<User> team) {
         this.team = team;
     }
 

@@ -4,9 +4,7 @@ import org.hibernate.classic.Session;
 import org.hibernate.SessionFactory;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mockito;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import uk.co.adaptivelogic.poker.dao.impl.HibernateProjectDao;
 import uk.co.adaptivelogic.poker.entity.Project;
 import static org.mockito.Mockito.*;
 
@@ -19,19 +17,31 @@ import static org.mockito.Mockito.*;
  */
 public class HibernateProjectDaoTest {
     private HibernateProjectDao projectDao;
+    private Session session;
+    private SessionFactory sessionFactory;
 
     @Before
     public void setUp() {
         projectDao = new HibernateProjectDao();
-        SessionFactory sessionFactory = mock(SessionFactory.class);
-        Session session = mock(Session.class);
+        sessionFactory = mock(SessionFactory.class);
+        session = mock(Session.class);
         when(sessionFactory.getCurrentSession()).thenReturn(session);
         projectDao.setSessionFactory(sessionFactory);
     }
 
     @Test
-    public void testSave() throws Exception {
+    public void testSave() {
         Project project = new Project();
         projectDao.save(project);
+
+        verify(session).save(project);
+    }
+
+    @Test
+    public void testGetProject() {
+        Project project = new Project();
+        projectDao.getProject(1L);
+
+        verify(session).get(Project.class, 1L);
     }
 }

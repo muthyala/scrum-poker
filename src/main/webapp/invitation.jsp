@@ -23,7 +23,7 @@
         <fieldset>
             <legend>Join Project</legend>
             <label>
-                <input type="name" placeholder="Joe Bloggs"/>
+                <input type="text" name="name" placeholder="Joe Bloggs"/>
             </label>
             <button type="submit" class="btn btn-primary">Join Project</button>
         </fieldset>
